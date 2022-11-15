@@ -1,0 +1,11 @@
+{
+  "name": "tutorial-3-server",
+  "version": "1.0.0",
+  "description": "initial server ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sreeram.A",
+  "license": "ISC"
+}
