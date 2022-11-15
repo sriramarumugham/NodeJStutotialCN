@@ -1,0 +1,800 @@
+<!doctype HTML>
+<html>
+	<head>
+		<title>musci-player</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+         <link rel="stylesheet" href="music-player.today.css" /> 
+
+	</head>
+<body>
+	<section id="nav-bar">
+            <div id="nav-bar-left-section" class="flex-aling-center">
+                <div id="brand">
+                    <i class="fa-solid fa-music" id="music-logo"></i>
+                    <i class="fa-solid fa-face-laugh" id="smily-logo"></i>
+                </div>
+                <div id="brand-name">
+                    <h1>Ninja<br>Studio</h1>
+                </div>
+            </div>
+            <div id="nav-bar-middle-section" class="flex-aling-center">
+                <p>Favourites</p>
+            </div>
+            <div id="nav-bar-right-section" class="flex-aling-center">
+            <div id="search-box-container">
+                    <button id="search-box-search-icon-container" class="search-button-icon">
+                        <i class="fa-solid fa-magnifying-glass" id="search-box-search-icon"></i>
+                    </button>
+                    <input type="text" class="search-button-icon" id="search-box-input">
+                    <button id="search-box-mic-icon-container" class="search-button-icon">
+                        <i class="fa-solid fa-microphone" id="search-box-mic-icon"></i>
+                    </button>
+            </div> 
+            <div id="notification-container">
+                    <i class="fa-solid fa-bell"></i>
+            </div>
+            <div id="profile-container">
+            </div>
+            </div>
+    </section>
+    <section id="body-session">
+        <!---------------------------------------------------- ------------------------left ------------------------>
+        <div id="master-play-left">
+
+            <!------------------ scrollbar ------- -->
+            <div id="master-play-scroller">
+                     <div id="master-play-banner"></div>
+                     <div id="banner-container">
+                     <div id="banner-1" class="banner">
+                        <!-- testing for adding second  -->
+                         <a href="/music-player.today-page-2.html"><img src="https://wallpapercave.com/wp/wp5169511.jpg"></a>
+                     </div>
+                     <div id="banner-2" class="banner">
+                         <img src="https://th.bing.com/th/id/OIP.DV7nbd5vi40mh35bK1xxPwHaHa?pid=ImgDet&w=900&h=900&rs=1">
+                     </div>
+                     <div id="banner-3" class="banner">
+                         <img src="https://cdn.albumoftheyear.org/album/385323-stay-1.jpg   ">
+                     </div></div>
+            
+            </div>
+
+            <!-- latest release--------------------------- -->
+            <div id="latest-release-container">
+                <h2 class="container-headings">Latest Release</h2>
+                <div id="latest-release-container-left-right">
+                    <div id="latest-release-container-left">
+                        <div class="latest-relese-card">
+                            <div class="latest-relese-card-image">
+                                <img src="https://i.ytimg.com/vi/NDmRGjPaYFU/maxresdefault.jpg">
+                                 <div class="latest-relese-card-icon">
+                                  <i class="fa-solid fa-play"></i>
+                                 </div>
+                            </div>
+
+                            <div class="latest-relese-card-songname">
+                              <h4 >Song Name</h4>
+                              <p>11.11.2011</p>
+                            </div>
+                            <div class="latest-relese-card-play">
+                             <i class="fa-solid fa-ellipsis"></i> 
+                             <p>5.00</p>
+                            </div>
+                        </div>
+
+                        <div class="latest-relese-card">
+                            <div class="latest-relese-card-image">
+                                <img src="https://th.bing.com/th/id/OIP.IXGKp0T8gRvZ9QT3cJgVWwHaHa?w=202&h=202&c=7&r=0&o=5&dpr=1.25&pid=1.7">
+                                 <div class="latest-relese-card-icon">
+                                  <i class="fa-solid fa-play"></i>
+                                 </div>
+                            </div>
+
+                            <div class="latest-relese-card-songname">
+                              <h4 >Song Name</h4>
+                              <p>11.11.2011</p>
+                            </div>
+                            <div class="latest-relese-card-play">
+                            <i class="fa-solid fa-ellipsis"></i> 
+                             <p>5.00</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div id="latest-release-container-right">
+                        <div class="latest-relese-card">
+                            <div class="latest-relese-card-image">
+                                <img src="https://th.bing.com/th/id/OIP.DV7nbd5vi40mh35bK1xxPwHaHa?pid=ImgDet&w=900&h=900&rs=1">
+                                 <div class="latest-relese-card-icon">
+                                  <i class="fa-solid fa-play"></i>
+                                 </div>
+                            </div>
+
+                            <div class="latest-relese-card-songname">
+                              <h4 >Song Name</h4>
+                              <p>11.11.2011</p>
+                            </div>
+                            <div class="latest-relese-card-play">
+                            <i class="fa-solid fa-ellipsis"></i> 
+                             <p>5.00</p>
+                            </div>
+                        </div>
+
+                        <div class="latest-relese-card">
+                            <div class="latest-relese-card-image">
+                                <img src="https://i.pinimg.com/originals/28/fb/4d/28fb4d2fe5c9b067c9042ff89986b147.jpg">
+                                 <div class="latest-relese-card-icon">
+                                  <i class="fa-solid fa-play"></i>
+                                 </div>
+                            </div>
+
+                            <div class="latest-relese-card-songname">
+                              <h4 >Song Name</h4>
+                              <p>11.11.2011</p>
+                            </div>
+                            <div class="latest-relese-card-play">
+                            <i class="fa-solid fa-ellipsis"></i> 
+                             <p>5.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!------ -------popular artist container --------->
+            <div id="popular-artist-container" class="">
+                <h2 class="container-headings">Popular Artist</h2>
+                    <div class="container-row">
+                        <div class="popular-artist-card">
+                            <div class="image-container-circle">
+                            <img src="https://th.bing.com/th/id/R.6c3f81cb7bc22a69baed4457ac0a9ea5?rik=aha2nEzV2LdXcw&riu=http%3a%2f%2fhairstyles.thehairstyler.com%2fhairstyle_views%2ffront_view_images%2f11983%2foriginal%2fZayn-Malik.jpg&ehk=xzqddgteePq9Iu%2fpLDH%2fPLHuhq5pAOdRCgfX1K6KdRY%3d&risl=&pid=ImgRaw&r=0">
+                            </div>
+                            <div class="popular-artist-footer">
+                            <p>Zyan</p>
+                            </div>
+                        </div>
+                        <div class="popular-artist-card">
+                            <div class="image-container-circle">
+                            <img src="https://i.scdn.co/image/ab6761610000e5eb36331847b6a1443a854b1740">
+                            </div>
+                            <div class="popular-artist-footer">
+                            <p>Young dolphin</p>
+                            </div>
+                        </div>
+                        <div class="popular-artist-card">
+                            <div class="image-container-circle">
+                            <img src="https://i.scdn.co/image/f0cd78b491d29b33f4fadca62ddbbc98a590f7fe">
+                            </div>
+                            <div class="popular-artist-footer">
+                            <p>David Duav</p>
+                            </div>
+                        </div>
+                        <div class="popular-artist-card">
+                            <div class="image-container-circle">
+                               <img src="https://i.scdn.co/image/28e72030363c5e5952183332d5568c36fb822009">
+                            </div>
+                            <div class="popular-artist-footer">
+                                <p>Angele</p>
+                            </div>
+                        </div>
+                        <div class="popular-artist-card">
+                            <div class="image-container-circle">
+                            <img src="https://i.pinimg.com/originals/4b/f6/53/4bf653e3259ac91b0371a4c506da4f92.jpg">
+                            </div>
+                            <div class="popular-artist-footer">
+                            <p>Billie Eillish</p>
+                            </div>
+                        </div>
+                        <div class="popular-artist-card">
+                            <div class="image-container-circle">
+                            <img src="https://th.bing.com/th/id/OIP.Y1EqaFpSCYq_XieqoHvr5AHaFj?pid=ImgDet&rs=1">
+                            </div>
+                            <div class="popular-artist-footer">
+                            <p>Dualipa</p>
+                            </div>
+                        </div>
+                        <div class="popular-artist-card">
+                            <div class="image-container-circle">
+                            <img src="https://th.bing.com/th/id/OIP.FBu-JqwUGcxeuanfbTLjzQHaEK?w=276&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7">
+                            </div>
+                            <div class="popular-artist-footer">
+                            <p>Taylor swift</p>
+                            </div>
+                        </div>
+                        <div class="popular-artist-card">
+                            <div class="image-container-circle">
+                            <img src="https://i.scdn.co/image/ab6761610000e5eb36331847b6a1443a854b1740">
+                            </div>
+                            <div class="popular-artist-footer">
+                            <p>Young dolphin</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                   
+            </div>
+
+            <!-- -----------------------radio -->
+            <div id="radio-station">
+                <div id="radio-station-image-container">
+                    <div id="radio-background-one"></div>
+                    <div id="radio-background-two"></div>
+                    <div id="radio-main-info">
+                        <div id="radio-info-station-container">
+                                <div id="station-brand">
+                                  <i class="fa-solid fa-music"></i>
+                                  <i class="fa-solid fa-face-laugh"></i>
+                                </div>
+                                
+                        </div>
+                        <h4>Stations</h4>
+                    </div>
+                </div>
+                <div class="radio-card">
+                    <div class="radio-card-image-container">
+                        <img src="https://wallpapercave.com/wp/wp4815417.jpg">
+                    </div>
+                    <div class="radio-card-name">
+                            <h4>Love</h4>
+                    </div>
+                </div>
+                <div class="radio-card">
+                    <div class="radio-card-image-container">
+                        <img src="https://th.bing.com/th/id/OIP.jYEVauxyf3acZpI0lRkOBgHaHa?pid=ImgDet&w=500&h=500&rs=1">
+                        
+                    </div>
+                    <div class="radio-card-name">
+                            <p>Retro</p>
+                    </div>
+                </div>
+                <div class="radio-card">
+                    <div class="radio-card-image-container">
+                        <img src="https://th.bing.com/th/id/OIP.r8lqA8To97Rz1pay1bS2PwHaHa?pid=ImgDet&w=1200&h=1200&rs=1">
+                        
+                    </div>
+                    <div class="radio-card-name">
+                            <p>Electronic</p>
+                    </div>
+                </div>
+                <div class="radio-card">
+                    <div class="radio-card-image-container">
+                        <img src="https://betterme.world/articles/wp-content/uploads/2020/08/shutterstock_1681957492-1024x683.jpg">
+                        
+                    </div>
+                    <div class="radio-card-name">
+                            <p>Workout</p>
+                    </div>
+                </div>
+                <div class="radio-card">
+                    <div class="radio-card-image-container">
+                        <img src="https://i.pinimg.com/originals/f2/ec/07/f2ec07f13fb29da4b29ece5694862993.png">
+                       
+                    </div>
+                     <div class="radio-card-name">
+                            <p>Rock</p>
+                    </div>
+                </div>
+                <div class="radio-card">
+                    <div class="radio-card-image-container">
+                        <img src="https://th.bing.com/th/id/OIP.7By7yyTJmItWmUa80-J22wHaFj?pid=ImgDet&w=576&h=432&rs=1">
+                        
+                    </div>
+                    <div class="radio-card-name">
+                            <p>Pop</p>
+                        </div>
+                </div>
+            </div>
+
+            <!-- ---------------------------themes -->
+            <div id="theme-session">
+                
+                <div class="theme-card">
+                    <div class="theme-card-image-contatiner">
+                        <img src="https://th.bing.com/th/id/OIP.6FZ_k7uqwY05B9GYXtxNPwHaDP?pid=ImgDet&w=1200&h=525&rs=1">
+                    </div>
+                    <div class="theme-card-info">
+                        <h4>Party</h4>
+                    </div>
+                </div>
+                <div class="theme-card">
+                    <div class="theme-card-image-contatiner">
+                        <img src="https://spillmagazine.com/wp-content/uploads/2018/06/Electronic-Music.jpg">
+                    </div>
+                    <div class="theme-card-info">
+                        <h4>
+                            Electronic
+                        </h4>
+                    </div>
+                </div>
+                <div class="theme-card">
+                    <div class="theme-card-image-contatiner">
+                        <img src="https://i.pinimg.com/originals/89/cd/62/89cd629393300db639447088f8283e9e.jpg">
+                    </div>
+                    <div class="theme-card-info">
+                        <h4>
+                            Road trip
+                        </h4>
+                    </div>
+                </div>
+            </div> 
+
+            <!-- ---------------------language sesion -->
+
+            <div id="language-session">
+             <div class="session-header">
+                <h4>Latest English</h4>
+             </div>
+             <div class="language-cards">
+                <div class="language-card">
+                    <div class="language-card-header">
+                        <img src="https://i.scdn.co/image/ab67616d0000b273d95b69878ae7e6d6307bf2de">
+                    </div>
+                    <div class="language-card-body">
+                        <p> <strong>Onesium</strong> </p>
+                        <p>Aug 11, 2017</p>
+                    </div>
+                </div>
+                <div class="language-card">
+                    <div class="language-card-header">
+                        <img src="https://i.pinimg.com/originals/7f/ed/68/7fed68a3ffaf9e3c98aefe8c564de426.jpg">
+                    </div>
+                    <div class="language-card-body">
+                        <p> <strong>Onesium</strong> </p>
+                        <p>Aug 11, 2017</p>
+                    </div>
+                </div>
+                <div class="language-card">
+                    <div class="language-card-header">
+                        <img src="https://i.pinimg.com/736x/ee/9e/21/ee9e21d8890c0cf1a3faff5b3269c945--lp-spiritual.jpg">
+                    </div>
+                    <div class="language-card-body">
+                        <p> <strong>Onesium</strong> </p>
+                        <p>Aug 11, 2017</p>
+                    </div>
+                </div>
+                <div class="language-card">
+                    <div class="language-card-header">
+                        <img src="https://img.discogs.com/9E7cyhEparyvrgIo-4Qh1S93s6A=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-4787624-1385908717-2633.jpeg.jpg">
+                    </div>
+                    <div class="language-card-body">
+                        <p> <strong>Onesium</strong> </p>
+                        <p>Aug 11, 2017</p>
+                    </div>
+                </div>
+                <div class="language-card">
+                    <div class="language-card-header">
+                        <img src=" https://th.bing.com/th/id/OIP.oJOUPAZX5_CneuCnuH6ARAAAAA?pid=ImgDet&w=320&h=320&rs=1">
+                    </div>
+                    <div class="language-card-body">
+                        <p> <strong>Onesium</strong> </p>
+                        <p>Aug 11, 2017</p>
+                    </div>
+                </div>
+                <div class="language-card">
+                    <div class="language-card-header">
+                        <img src="https://th.bing.com/th/id/R.9442e73bfd05b1d6ca6391d554feb2e2?rik=xurr2KOnUd3REQ&riu=http%3a%2f%2fwww.progarchives.com%2fprogressive_rock_discography_covers%2f1608%2fcover_27351712112009.jpg&ehk=4JvshVYnKZZiNI9BBCuZbqMtD47ZZHCBk9z1HxV4%2fKk%3d&risl=&pid=ImgRaw&r=0">
+                    </div>
+                    <div class="language-card-body">
+                        <p> <strong>Onesium</strong> </p>
+                        <p>Aug 11, 2017</p>
+                    </div>
+                </div>
+                <div class="language-card">
+                    <div class="language-card-header">
+                        <img src="https://i.pinimg.com/originals/8b/b7/3d/8bb73da2fe154036210a1e8035eeb81c.jpg">
+                    </div>
+                    <div class="language-card-body">
+                        <p> <strong>Onesium</strong> </p>
+                        <p>Aug 11, 2017</p>
+                    </div>
+                </div>
+               
+             </div>
+            </div>
+
+            <!-- ---------------------language sesion -->
+             <div id="language-session">
+             <div class="session-header">
+                <h4>Latest English</h4>
+             </div>
+             <div class="language-cards">
+                <div class="language-card">
+                    <div class="language-card-header">
+                        <img src=" https://th.bing.com/th/id/OIP.oJOUPAZX5_CneuCnuH6ARAAAAA?pid=ImgDet&w=320&h=320&rs=1">
+                    </div>
+                    <div class="language-card-body">
+                        <p> <strong>Onesium</strong> </p>
+                        <p>Aug 11, 2017</p>
+                    </div>
+                </div>
+                <div class="language-card">
+                    <div class="language-card-header">
+                        <img src="https://i.scdn.co/image/ab67616d0000b273d95b69878ae7e6d6307bf2de">
+                    </div>
+                    <div class="language-card-body">
+                        <p> <strong>Onesium</strong> </p>
+                        <p>Aug 11, 2017</p>
+                    </div>
+                </div>
+                <div class="language-card">
+                    <div class="language-card-header">
+                        <img src="https://i.pinimg.com/originals/7f/ed/68/7fed68a3ffaf9e3c98aefe8c564de426.jpg">
+                    </div>
+                    <div class="language-card-body">
+                        <p> <strong>Onesium</strong> </p>
+                        <p>Aug 11, 2017</p>
+                    </div>
+                </div>
+                <div class="language-card">
+                    <div class="language-card-header">
+                        <img src="https://i.pinimg.com/736x/ee/9e/21/ee9e21d8890c0cf1a3faff5b3269c945--lp-spiritual.jpg">
+                    </div>
+                    <div class="language-card-body">
+                        <p> <strong>Onesium</strong> </p>
+                        <p>Aug 11, 2017</p>
+                    </div>
+                </div>
+                <div class="language-card">
+                    <div class="language-card-header">
+                        <img src="https://img.discogs.com/9E7cyhEparyvrgIo-4Qh1S93s6A=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-4787624-1385908717-2633.jpeg.jpg">
+                    </div>
+                    <div class="language-card-body">
+                        <p> <strong>Onesium</strong> </p>
+                        <p>Aug 11, 2017</p>
+                    </div>
+                </div>
+                <div class="language-card">
+                    <div class="language-card-header">
+                        <img src="https://th.bing.com/th/id/R.9442e73bfd05b1d6ca6391d554feb2e2?rik=xurr2KOnUd3REQ&riu=http%3a%2f%2fwww.progarchives.com%2fprogressive_rock_discography_covers%2f1608%2fcover_27351712112009.jpg&ehk=4JvshVYnKZZiNI9BBCuZbqMtD47ZZHCBk9z1HxV4%2fKk%3d&risl=&pid=ImgRaw&r=0">
+                    </div>
+                    <div class="language-card-body">
+                        <p> <strong>Onesium</strong> </p>
+                        <p>Aug 11, 2017</p>
+                    </div>
+                </div>
+                <div class="language-card">
+                    <div class="language-card-header">
+                        <img src="https://i.pinimg.com/originals/8b/b7/3d/8bb73da2fe154036210a1e8035eeb81c.jpg">
+                    </div>
+                    <div class="language-card-body">
+                        <p> <strong>Onesium</strong> </p>
+                        <p>Aug 11, 2017</p>
+                    </div>
+                </div>
+               
+             </div>
+            </div>
+        </div>
+
+        <!-- right---------------------------------------------------------------------------------------->
+        <div id="master-play-right">
+                <div id="queue-container">
+                    <div id="queue-header">
+                        <div id="queue-heading">
+                            <h1>Queue</h1>
+                        </div>
+                        <div id="queue-dropdown">
+                           <button type="submit">Queue <i class="fa-solid fa-angle-down"></i></button>
+                           <select>
+                               <option></option>
+                           </select>
+                        </div>
+                    </div>
+                    <div id="queue-body">
+                       <div class="music-card">
+                           <div class="music-card-no"><h4>01</h4></div>
+                           <div class="music-card-body">
+                               <div class="music-card-image-container"><img src="https://th.bing.com/th/id/OIP.QswRmg3n3Y27lUitXdycFgHaHa?pid=ImgDet&rs=1">
+                               </div>
+                               <div class="music-card-info">
+                                       <h4 class="text-thicker">Mirage</h4>
+                                       <p class="text-lighter">Else</hp>
+                               </div>
+                               
+                           </div>
+                           <div class="music-card-icon">
+                               <i class="fa-regular fa-heart"></i>
+                           </div>
+                       </div>
+                       <div class="music-card">
+                           <div class="music-card-no"><h4>02</h4></div>
+                           <div class="music-card-body">
+                               <div class="music-card-image-container"><img src="https://cdn.albumoftheyear.org/album/385323-stay-1.jpg">
+                               </div>
+                               <div class="music-card-info">
+                                       <h4  class="text-thicker">Stay with ME</h4>
+                                       <p  class="text-lighter">Justin Bieber</p>
+                               </div>
+                               
+                           </div>
+                           <div class="music-card-icon">
+                               <i class="fa-regular fa-heart"></i>
+                           </div>
+                       </div>
+                       <div class="music-card">
+                           <div class="music-card-no"><h4>03</h4></div>
+                           <div class="music-card-body">
+                               <div class="music-card-image-container"><img src="https://i.pinimg.com/originals/3f/02/d1/3f02d1c965e340efa8d3fda40070da2c.jpg">
+                               </div>
+                               <div class="music-card-info">
+                                       <h4  class="text-thicker">Cheap thrils</h4>
+                                       <p  class="text-lighter">Sia</p>
+                               </div>
+                               
+                           </div>
+                           <div class="music-card-icon">
+                               <i class="fa-regular fa-heart"></i>
+                           </div>
+                       </div>
+                       <div class="music-card">
+                           <div class="music-card-no"><h4>04</h4></div>
+                           <div class="music-card-body">
+                               <div class="music-card-image-container"><img src="https://th.bing.com/th/id/R.2558c5a21aacf1e9ff8a248736b0533a?rik=gyrSnzekwRXrRw&riu=http%3a%2f%2fhiphop-n-more.com%2fwp-content%2fuploads%2f2016%2f12%2fr-kelly-let-me-love-you.jpg&ehk=VyL5Ou6flr8sUCtRapki4jWRUHwqpBDkSEKzItJfipg%3d&risl=&pid=ImgRaw&r=0">
+                               </div>
+                               <div class="music-card-info">
+                                       <h4  class="text-thicker">Let me you</h4>
+                                       <p  class="text-lighter">Justin</p>
+                               </div>
+                               
+                           </div>
+                           <div class="music-card-icon">
+                               <i class="fa-regular fa-heart"></i>
+                           </div>
+                       </div>
+                       <div class="music-card">
+                           <div class="music-card-no"><h4>05</h4></div>
+                           <div class="music-card-body">
+                               <div class="music-card-image-container"><img src="https://th.bing.com/th/id/OIP.Auax7HDqTb7ibC_rqhD2tgHaHa?pid=ImgDet&rs=1">
+                               </div>
+                               <div class="music-card-info">
+                                       <h4  class="text-thicker">Shape of you</h4>
+                                       <p  class="text-lighter">Ed sheeran</p>
+                               </div>
+                               
+                           </div>
+                           <div class="music-card-icon">
+                               <i class="fa-regular fa-heart"></i>
+                           </div>
+                       </div>
+                       <div class="music-card">
+                           <div class="music-card-no"><h4>06</h4></div>
+                           <div class="music-card-body">
+                               <div class="music-card-image-container"><img src="https://th.bing.com/th/id/OIP.QswRmg3n3Y27lUitXdycFgHaHa?pid=ImgDet&rs=1">
+                               </div>
+                               <div class="music-card-info">
+                                       <h4 class="text-thicker">Mirage</h4>
+                                       <p class="text-lighter">Else</hp>
+                               </div>
+                               
+                           </div>
+                           <div class="music-card-icon">
+                               <i class="fa-regular fa-heart"></i>
+                           </div>
+                       </div>
+                       <div class="music-card">
+                           <div class="music-card-no"><h4>07</h4></div>
+                           <div class="music-card-body">
+                               <div class="music-card-image-container"><img src="https://cdn.albumoftheyear.org/album/385323-stay-1.jpg">
+                               </div>
+                               <div class="music-card-info">
+                                       <h4  class="text-thicker">Stay with ME</h4>
+                                       <p  class="text-lighter">Justin Bieber</p>
+                               </div>
+                               
+                           </div>
+                           <div class="music-card-icon">
+                               <i class="fa-regular fa-heart"></i>
+                           </div>
+                       </div>
+                       <div class="music-card">
+                           <div class="music-card-no"><h4>08</h4></div>
+                           <div class="music-card-body">
+                               <div class="music-card-image-container"><img src="https://i.pinimg.com/originals/3f/02/d1/3f02d1c965e340efa8d3fda40070da2c.jpg">
+                               </div>
+                               <div class="music-card-info">
+                                       <h4  class="text-thicker">Cheap thrils</h4>
+                                       <p  class="text-lighter">Sia</p>
+                               </div>
+                               
+                           </div>
+                           <div class="music-card-icon">
+                               <i class="fa-regular fa-heart"></i>
+                           </div>
+                       </div>
+                       <div class="music-card">
+                           <div class="music-card-no"><h4>09</h4></div>
+                           <div class="music-card-body">
+                               <div class="music-card-image-container"><img src="https://th.bing.com/th/id/R.2558c5a21aacf1e9ff8a248736b0533a?rik=gyrSnzekwRXrRw&riu=http%3a%2f%2fhiphop-n-more.com%2fwp-content%2fuploads%2f2016%2f12%2fr-kelly-let-me-love-you.jpg&ehk=VyL5Ou6flr8sUCtRapki4jWRUHwqpBDkSEKzItJfipg%3d&risl=&pid=ImgRaw&r=0">
+                               </div>
+                               <div class="music-card-info">
+                                       <h4  class="text-thicker">Let me you</h4>
+                                       <p  class="text-lighter">Justin</p>
+                               </div>
+                               
+                           </div>
+                           <div class="music-card-icon">
+                               <i class="fa-regular fa-heart"></i>
+                           </div>
+                       </div>
+                       <div class="music-card">
+                           <div class="music-card-no"><h4>10</h4></div>
+                           <div class="music-card-body">
+                               <div class="music-card-image-container"><img src="https://th.bing.com/th/id/OIP.Auax7HDqTb7ibC_rqhD2tgHaHa?pid=ImgDet&rs=1">
+                               </div>
+                               <div class="music-card-info">
+                                       <h4  class="text-thicker">Shape of you</h4>
+                                       <p  class="text-lighter">Ed sheeran</p>
+                               </div>
+                               
+                           </div>
+                           <div class="music-card-icon">
+                               <i class="fa-regular fa-heart"></i>
+                           </div>
+                       </div>
+                        <div class="music-card">
+                           <div class="music-card-no"><h4>05</h4></div>
+                           <div class="music-card-body">
+                               <div class="music-card-image-container"><img src="https://th.bing.com/th/id/OIP.Auax7HDqTb7ibC_rqhD2tgHaHa?pid=ImgDet&rs=1">
+                               </div>
+                               <div class="music-card-info">
+                                       <h4  class="text-thicker">Shape of you</h4>
+                                       <p  class="text-lighter">Ed sheeran</p>
+                               </div>
+                               
+                           </div>
+                           <div class="music-card-icon">
+                               <i class="fa-regular fa-heart"></i>
+                           </div>
+                       </div>
+                       <div class="music-card">
+                           <div class="music-card-no"><h4>06</h4></div>
+                           <div class="music-card-body">
+                               <div class="music-card-image-container"><img src="https://th.bing.com/th/id/OIP.QswRmg3n3Y27lUitXdycFgHaHa?pid=ImgDet&rs=1">
+                               </div>
+                               <div class="music-card-info">
+                                       <h4 class="text-thicker">Mirage</h4>
+                                       <p class="text-lighter">Else</hp>
+                               </div>
+                               
+                           </div>
+                           <div class="music-card-icon">
+                               <i class="fa-regular fa-heart"></i>
+                           </div>
+                       </div>
+                       <div class="music-card">
+                           <div class="music-card-no"><h4>07</h4></div>
+                           <div class="music-card-body">
+                               <div class="music-card-image-container"><img src="https://cdn.albumoftheyear.org/album/385323-stay-1.jpg">
+                               </div>
+                               <div class="music-card-info">
+                                       <h4  class="text-thicker">Stay with ME</h4>
+                                       <p  class="text-lighter">Justin Bieber</p>
+                               </div>
+                               
+                           </div>
+                           <div class="music-card-icon">
+                               <i class="fa-regular fa-heart"></i>
+                           </div>
+                       </div>
+                       <div class="music-card">
+                           <div class="music-card-no"><h4>08</h4></div>
+                           <div class="music-card-body">
+                               <div class="music-card-image-container"><img src="https://i.pinimg.com/originals/3f/02/d1/3f02d1c965e340efa8d3fda40070da2c.jpg">
+                               </div>
+                               <div class="music-card-info">
+                                       <h4  class="text-thicker">Cheap thrils</h4>
+                                       <p  class="text-lighter">Sia</p>
+                               </div>
+                               
+                           </div>
+                           <div class="music-card-icon">
+                               <i class="fa-regular fa-heart"></i>
+                           </div>
+                       </div>
+                       <div class="music-card">
+                           <div class="music-card-no"><h4>09</h4></div>
+                           <div class="music-card-body">
+                               <div class="music-card-image-container"><img src="https://th.bing.com/th/id/R.2558c5a21aacf1e9ff8a248736b0533a?rik=gyrSnzekwRXrRw&riu=http%3a%2f%2fhiphop-n-more.com%2fwp-content%2fuploads%2f2016%2f12%2fr-kelly-let-me-love-you.jpg&ehk=VyL5Ou6flr8sUCtRapki4jWRUHwqpBDkSEKzItJfipg%3d&risl=&pid=ImgRaw&r=0">
+                               </div>
+                               <div class="music-card-info">
+                                       <h4  class="text-thicker">Let me you</h4>
+                                       <p  class="text-lighter">Justin</p>
+                               </div>
+                               
+                           </div>
+                           <div class="music-card-icon">
+                               <i class="fa-regular fa-heart"></i>
+                           </div>
+                       </div>
+                       <div class="music-card">
+                           <div class="music-card-no"><h4>10</h4></div>
+                           <div class="music-card-body">
+                               <div class="music-card-image-container"><img src="https://th.bing.com/th/id/OIP.Auax7HDqTb7ibC_rqhD2tgHaHa?pid=ImgDet&rs=1">
+                               </div>
+                               <div class="music-card-info">
+                                       <h4  class="text-thicker">Shape of you</h4>
+                                       <p  class="text-lighter">Ed sheeran</p>
+                               </div>
+                               
+                           </div>
+                           <div class="music-card-icon">
+                               <i class="fa-regular fa-heart"></i>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+    <section id="master-play-controll">
+        <div id="master-play-controll-container">
+           <div id="master-play-body">
+               <div id="master-play-body-music-card-container">
+                   <div id="master-play-song-card">
+                       <div id="master-play-song-card-image-container">
+                             <img src="https://i.scdn.co/image/ab67616d0000b273d95b69878ae7e6d6307bf2de">
+                       </div>
+                       <div id="master-play-song-card-music-info">
+                           <div id="music-info-header">
+                               <div id="music-info-header-song-name">
+                                   <h4> Imageine </h4> 
+                               </div>
+                               <div id="music-info-header-icons">
+                                   <i class="fa-regular fa-heart"></i>
+                                   <i class="fa-solid fa-ban"></i>
+                               </div>
+                           </div>
+                           <div id="music-info-footer">
+                               <p>John Lenon</p>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <div id="master-play-body-controll">
+                   <div id="player-header">
+                       <i class="fa-solid fa-shuffle"></i>
+                       <i class="fa-solid fa-circle-chevron-left"></i>
+                       <i class="fa-solid fa-circle-pause"></i>
+                       <i class="fa-solid fa-circle-play"></i>
+                       <i class="fa-solid fa-circle-chevron-right"></i>
+                       <i class="fa-solid fa-arrows-rotate"></i>
+                   </div>
+                   <div id="player-body">
+                       <div id="progress-bar-info"><p>1.39</p></div>
+                       <div id="progress-bar-container">
+                           <div id="progress-bar-length">
+                               
+                           </div>
+                           <div id="progress-bar-head">
+                                   
+                            </div>
+                       </div>
+                      <div id="progress-bar-info"><p>5.55</p></div>
+                   </div>
+               </div>
+               <div id="master-play-body-toll">
+                   <div id="tool-contaienr">
+                       <i class="fa-solid fa-bars-staggered"></i>
+                       <i class="fa-solid fa-desktop"></i>
+                       <div id="volume-tool-container">
+                           <i class="fa-solid fa-volume-high"></i>
+
+                           <div id="total-volume-toll">
+                               <div id="total-volume-width">
+                                   
+                               </div>
+                               <div id="total-volume-head">
+                                   
+                               </div>
+                           </div>
+                       </div>
+                       <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                   </div>
+               </div>
+           </div> 
+        </div>
+    </section>
+
+</body>
+</html>

@@ -15,8 +15,8 @@ function requestHandler(req, res) {
 
   console.log(req.url);
 
+ 
   //fs system to read  file and send it as response
-
   fs.readFile('./index.html' , function(err, data){
 
     if(err){

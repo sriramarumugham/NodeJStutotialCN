@@ -1,0 +1,194 @@
+body{
+	
+}
+#body-session{
+	/*border: 5px solid red;*/
+	display: flex;
+	justify-content: space-between;
+}
+#master-play-left{
+	/*border: 1px solid red;*/
+}
+#master-play-left>#music-description-container{
+	height: 40vh;
+	width: 100%;
+	/*border: 2px solid white;*/
+	display: flex;
+	background-color:rgb(44, 31, 83);
+	justify-content: space-between;
+	border-radius: 5px;
+}
+#master-play-left>#music-description-container>#music-description-left{
+    width: 32%;
+    height:100%;
+    /*border: 2px solid yellow;*/
+}
+#master-play-left>#music-description-container>#music-description-left>img{
+	width: 100%;
+	height: 99%;
+	 /*background-color:rgb(44, 31, 83);*/
+	 opacity: 0.9;
+	 border-radius:  5px  0px 0px 5px;
+}
+#music-description-left::after {
+  display: block;
+  position: relative;
+  background-image: linear-gradient(to bottom, rgba(44, 31, 83, 0) 0, rgb(44, 31, 83) 100%);
+  margin-top: -150px;
+  height: 150px;
+  width: 100%;
+  content: '';
+}
+
+#master-play-left>#music-description-container>#music-description-right{
+	width: 64%;
+	height: 100%;
+	/*border: 2px solid orange;*/
+	display: flex;
+	flex-direction: column;
+}
+#music-description-header{
+     display: flex;
+     justify-content: space-between;
+     margin-top:7% ;
+}
+#description-heading-right{
+      
+}
+#description-heading-left{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 25%;
+}
+#music-description-body{
+	margin-top: 10px;
+	margin-right: 25px;
+}
+#music-description-footer{
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: start;
+}
+#music-footer-button-container{
+	display: flex;
+	justify-content: start;
+	gap: 1.25rem;
+	margin-bottom: 0.75rem;
+
+}
+#music-footer-button-container>.song-info-button{
+	/*width: 100px;*/
+	line-height: 1.5rem;
+	border-radius:10px;
+	padding: 5px 50px;
+	border-color: transparent;
+	border: 1px;
+}
+#music-footer-button-container>#play-all{
+	
+	
+	 background-image: linear-gradient(to bottom right, rgb(250, 19, 211), rgb(236, 172, 238));
+}
+#music-footer-button-container>#follow-artist{
+	background-color: transparent;
+}
+/*-------------singer-wise-songs--------------------*/
+#singer-special-container{
+	width: 100%;
+	margin-top: 25px;
+
+}
+.special-music-card{
+	width: 100%;
+	height: 3.5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 5px;
+	margin: 15px 0px;
+	transition: all 0.25s;
+}
+.special-music-card:hover{
+	background-color: grey;
+}
+.special-music-no{
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	width: 5%;
+	height: 100%;
+	/*border: 1px solid red;*/
+}
+.special-music-info{
+	width:80%;
+	display: flex;
+	justify-content: start;
+	/*border: 1px solid yellow;*/
+}
+.special-music-info>img{
+	width: 50px;
+	height: 50px;
+	/*border: 1px solid green;*/
+	margin: 0px 5px;
+}
+.song-name-singer{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: start;
+}
+.special-music-icons{
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	width: 15%;
+	height: 100%;
+	/*border: 1px solid red;*/
+	gap: 1rem;
+}
+
+
+
+
+
+/*--------------------master-play-right----*/
+
+#master-right-sesson{
+	/*border: 10px solid blue;*/
+	width: 28%;
+	margin-right: 5px;
+	overflow: hidden;
+	height: 150vh;
+}
+#similar-artist-container , #recently-player-container{
+	/*border: 2px solid green;*/
+	width: 100%;
+	margin-right:5px ;
+	/*margin-top: 15px;*/
+	margin: auto 5px 15px auto;
+}
+#similar-artist-container{
+	height: 50vh
+}
+#recently-player-container{
+	/*margin-top: 15px;*/
+	height: 75vh;
+}
+
+/*-------similar artist*/
+.latest-relese-card{
+	height: 25%;
+	margin:5px 0px ;
+}
+.latest-relese-card-image>img{
+	width:75px;
+	height: 75px;
+}
+.latest-relese-card-icon{
+	top: -50px;
+	left: 25px;
+}
+/*-------------older--------code*/
