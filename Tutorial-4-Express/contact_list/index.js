@@ -25,17 +25,56 @@ app.set("views", path.join(__dirname, "views"));
 //request response cycle
 //types of request
 
-app.get("/", function (req, res) {
-  res.send("<p>cool its runnig from express </p>");
-});
+//creating a temproary contact list to send to the view page 
+
+var contactList=[
+
+  {name:"Arpan",
+   phone:"323232323",
+  },
+  
+  {name:"Arpan",
+   phone:"323232323",
+  },
+  
+  {name:"Arpan",
+   phone:"323232323",
+  },
+  
+  {name:"Arpan",
+   phone:"323232323",
+  },
+  
+  {name:"Arpan",
+   phone:"323232323",
+  },
+  
+  {name:"Arpan",
+   phone:"323232323",
+  },
+  ]
+  
+// app.get("/", function (req, res) {
+//   res.send("<p>cool its runnig from express </p>");
+// });
 
 // app.get('/ejs' , function (req, res){
 //     res.render('home')
 // })
 
-app.get("/dejs", function (req, res) {
-  res.render("home", { title: "title from express" });
+app.get("/", function (req, res) {
+  res.render("home", { title: "title from express"  , contact_list: contactList});
 });
+
+app.get('/practice' , function(req , res){
+  res.render('practice');
+})
+
+// post request 
+
+app.post('/create-contact' , function (req , res){
+  return res.redirect('/practice');
+})
 
 app.listen(port, function (err) {
   if (err) {

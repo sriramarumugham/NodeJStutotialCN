@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <%= title %>
-    </title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- title cannot be accdeseed -->
+    <title><%= title %></title>
+  </head>
+  <body>
     <h1>HI FROM EJS</h1>
-</body>
+
+    <!-- rendeirng th econtact list passed from the controller  -->
+    <!-- <div>
+      <ul>
+        <% for( let i of contact_list){ %>
+        <li>
+          <p><%= i.name %></p>
+          <p><%= i.phone %></p>
+        </li>
+        <% } %>
+      </ul>
+    </div> -->
+
+    <!-- create a contact -->
+
+    <form action="/create-contact" method="POST">
+      <input type="text" name="name" placeholder="Enter name" required />
+
+      <input type="number" name="phone" placeholder="Enter phone" required />
+
+      <button type="submit">Add contact</button>
+    </form>
+  </body>
 </html>
