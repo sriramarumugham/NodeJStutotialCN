@@ -1,8 +1,15 @@
 const express = require("express");
 
-const path = require("path");
+
 
 const port = 8000;
+
+const path = require("path");
+
+//setting up the middleware to parser the request body
+const bodyParser= require('body-parser');
+
+
 
 // express as a function
 const app = express();
@@ -26,6 +33,8 @@ app.set("views", path.join(__dirname, "views"));
 //types of request
 
 //creating a temproary contact list to send to the view page 
+
+
 
 var contactList=[
 
@@ -62,6 +71,10 @@ var contactList=[
 //     res.render('home')
 // })
 
+//middle ware setup
+app.use(bodyParser.urlencoded({extended: false}));
+
+
 app.get("/", function (req, res) {
   res.render("home", { title: "title from express"  , contact_list: contactList});
 });
@@ -73,7 +86,10 @@ app.get('/practice' , function(req , res){
 // post request 
 
 app.post('/create-contact' , function (req , res){
-  return res.redirect('/practice');
+   console.log(req.body);
+  contactList.push(req.body);
+
+  return res.redirect('/');
 })
 
 app.listen(port, function (err) {
