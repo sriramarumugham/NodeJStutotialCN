@@ -1,13 +1,20 @@
+//before connectiong with express you need to connect ODM and DB
+
 const express = require("express");
-
 const port = 8000;
-
 const path = require("path");
 
 //setting up the middleware to parser the request body
 const bodyParser = require("body-parser");
 
-// express as a function
+//before express connection
+//connect he mongoose and db
+const db = require("./config/mongoose");
+
+//getting the collection from the model
+const Contact = require("./models/contact");
+
+//express connection // express as a function
 const app = express();
 
 //midleware
@@ -22,6 +29,7 @@ app.use(function (req, res, next) {
   req.myname = "Sriram";
   next();
 });
+
 //middleware2
 app.use(function (req, res, next) {
   // console.log("middleware 2", req.myname);
@@ -29,7 +37,6 @@ app.use(function (req, res, next) {
 });
 
 //setting up the apps template engine
-
 app.set("view engine", "ejs");
 
 //__dir name will give curent file path
@@ -38,15 +45,6 @@ app.set("view engine", "ejs");
 
 app.set("views", path.join(__dirname, "views"));
 // app.set('views' , "/dfa/adsfa/adsfsf");
-
-//listen  functon from express
-
-//Cannot GET/
-
-//request response cycle
-//types of request
-
-//creating a temproary contact list to send to the view page
 
 var contactList = [
   { name: "1", phone: "323232323" },
@@ -73,11 +71,13 @@ var contactList = [
 //middle ware setup
 
 app.get("/", function (req, res) {
-  //modidief myname added to reqeust from middleware
-  // console.log(req.myname, "from controller");
-  res.render("home", {
-    title: "title from express",
-    contact_list: contactList,
+  Contact.find({}, function (err, contacts) {
+    if (err) {
+      console.log("err in getting the contacts", err);
+      return;
+    }
+    console.log("got the contacts from db", "contacts");
+    return res.render("home", { title: "DB Contacts", contact_list: contacts });
   });
 });
 
@@ -88,37 +88,36 @@ app.get("/practice", function (req, res) {
 // post request
 
 app.post("/create-contact", function (req, res) {
-  //add the request body to the test contact list and sending to the view js
-  // console.log(req.body);
-  contactList.push(req.body);
-
-  return res.redirect("/");
+  // pushing the document to the colletion
+  Contact.create(
+    {
+      name: req.body.name,
+      phone: req.body.phone,
+    },
+    function (err, newContact) {
+      if (err) {
+        console.log("errr in creating a contact", err);
+        return;
+      }
+      console.log("contact Created", newContact);
+      return res.redirect("back");
+    }
+  );
 });
 
 //deletecontact
-
 app.get("/delete-contact", function (req, res) {
-
-// app.get("/delete-contact/:phone", function (req, res) {
- 
-    let phone =  req.query.phone;
-    console.log(phone , typeof(phone))
-  // let phone = req.params.phone;
-
-  const index=contactList.findIndex(contact=>contact.phone==phone.toString());
-
-  // contactList.map(contact=>{
-  //   console.log(contact.phone , phone , typeof(contact.phone) , typeof(phone));
-  // })
-  console.log(index);
-
-  if (index != -1) {
-    contactList.splice(index, 1);
-  }
-
+  let id = req.query.id;
+  Contact.findByIdAndDelete(id, function (err){
+    if(err){
+      console.log("error in deleting" , err);
+      return;
+    }
+      console.log("deleted the contact");
   res.redirect("back");
-});
 
+  }) 
+});
 
 app.listen(port, function (err) {
   if (err) {

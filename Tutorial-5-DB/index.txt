@@ -1,0 +1,32 @@
+MongoDB json , Document Database storage  
+
+Benifits:
+1) THe MEAN and MERN 
+
+2) A dummy data:
+
+[ {
+    name:"",          each one is a field each studen has many field
+    age:"",
+    gender:"",
+    roll_no:""
+  }
+]
+
+Terms: Collections , Document , Field
+1)  a studen is a document
+2) a sutdents name is a field
+3) all students are called collections
+
+
+ODM on MongoDB OBject document mapper
+
+we have a odm which intract with db and does all the works 
+learning odm is easy than mongoDb
+
+
+ORM OBject relation mapper
+ORM interacts with sequal 
+
+
+Steps
