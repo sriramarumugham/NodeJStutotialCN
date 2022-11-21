@@ -1,0 +1,135 @@
+body{
+    background-color: rgb(246, 199, 182);
+    background-color: rgb(247, 177, 151);
+
+    color: rgb(10, 10, 10);
+    margin: 0;
+    padding: 0;
+}
+input {
+    padding: 15px;
+    border-radius: 5px;
+    border-color: rgb(247, 247, 124);
+}
+select{
+    padding: 10px;
+    border-radius: 5px;
+    border-color: yellow;
+
+}
+.to-do-wrapper{
+    /* border: 1px solid rgb(9, 9, 9); */
+    border-radius: 5px;
+    max-width:600px;
+    min-width: 300px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto 0px auto;
+    flex-direction: column;  
+    justify-content: center;
+    align-items: center; 
+    background-color: rgb(247, 177, 151);
+    
+}
+.form-session{
+    width: 100%;
+    
+}
+.forms{
+   display: flex;   
+   flex-direction: column;
+   border: 1px solid rgb(18, 17, 17);
+   /* background-color: rgb(252, 205, 183); */
+   padding: 20px;
+
+   
+}
+.forms-body{
+    display: flex;
+    width: 100%;
+}
+fieldset{
+    width: 95%;
+    height: 70px;
+    margin: auto;
+    display: flex;
+       flex-direction: column;
+       border: 0px;
+    gap: 10px;
+    margin: 10px;
+}
+.submit-button{
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.list-form-session{
+    width: 100%;
+}
+ul{
+    /* border: 1px solid green; */
+    padding: 10px;
+}
+
+.list-session>ul>li{
+    margin:10px 0px;
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    border: 1px solid black;
+    padding: 5px;
+
+}
+.input-container{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.data-container{
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch;
+    /* border: 1px solid red; */
+    height: 100%;
+}
+.date-container{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: start;
+}
+.catogery{
+    width: 100px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 1000;
+}
+.personal{
+    background-color: rgb(131, 131, 241);
+}
+.work{
+    background-color: rgb(246, 106, 106);
+}
+.school{
+    background-color: rgb(241, 241, 15);
+}
+.other{
+    background-color: aquamarine;
+}

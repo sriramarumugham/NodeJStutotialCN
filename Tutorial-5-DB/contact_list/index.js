@@ -46,20 +46,6 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 // app.set('views' , "/dfa/adsfa/adsfsf");
 
-var contactList = [
-  { name: "1", phone: "323232323" },
-
-  { name: "2", phone: "22222222222" },
-
-  { name: "3", phone: "1111111111" },
-
-  { name: "5", phone: "33333333333" },
-
-  { name: "6", phone: "44444444" },
-
-  { name: "8", phone: "666666666" },
-];
-
 // app.get("/", function (req, res) {
 //   res.send("<p>cool its runnig from express </p>");
 // });

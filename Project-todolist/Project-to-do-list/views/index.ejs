@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Document</title>
+  </head>
+  <link rel="stylesheet" href="/css/index.css" />
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+  <body>
+    <div class="to-do-wrapper">
+      <h1>TO DO LIST</h1>
+      <div class="form-session">
+        <form action="/create-todo" method="POST">
+          <div class="forms">
+            <fieldset>
+              <label for="description">DESCRIPTION</label>
+              <input
+                name="description"
+                id="description"
+                type="text"
+                required="true"
+                placeholder="What do you need to do ?"
+              />
+            </fieldset>
+            <div class="forms-body">
+              <fieldset>
+                <label for="category">CATEGORY</label>
+                <select name="category" id="category" required="true">
+                  <option value="personal">PERSONAL</option>
+                  <option value="work">WORK</option>
+                  <option value="school">SCHOOL</option>
+                  <option value="other">OTHER</option>
+                </select>
+              </fieldset>
+              <fieldset>
+                <label for="date">DUE DATE</label>
+                <input id="date" name="date" type="date" required="true" />
+              </fieldset>
+            </div>
+          </div>
+          <div class="submit-button">
+            <button type="submit">SUBMIT</button>
+          </div>
+        </form>
+      </div>
+      <form  action="/delete-todo" method="POST" class="list-form-session" >
+        <div class="submit-button">
+            <button type="submit">DELETE</button>
+        </div>
+        <div class="list-session">
+          <ul>
+            <% for ( i of todos){%>
+            <li>
+              <div class="input-container">
+                <input name="id" value="<%= i._id %>" type="checkbox" />
+              </div>
+              <div class="data-container">
+                <h3><%= i.description%></h3>
+                <span class="date-container"
+                  >
+                  <i class="fa-solid fa-calendar-days"></i>
+                  <p><%= i.date%></p></span
+                >
+              </div>
+              <div class="catogery-container">
+                <div class="catogery <%= i.category%>"><%= i.category %></div>
+              </div>
+            </li>
+            <% }%>
+          </ul>
+        </div>
+
+    </form>
+    </div>
+  </body>
+ </html>
