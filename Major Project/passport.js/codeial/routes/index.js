@@ -11,6 +11,9 @@ router.use("/users", require("./users"));
 
 router.use("/post", require("./post"));
 
+
+router.use("/comments", require("./comment"));
+
 console.log("Router loaded");
 
 module.exports = router;
