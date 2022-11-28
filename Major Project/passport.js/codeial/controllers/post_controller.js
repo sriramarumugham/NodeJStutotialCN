@@ -1,5 +1,6 @@
 const Post = require("../models/post");
 const { post } = require("../routes");
+const Comment=require('../models/comment');
 
 module.exports.create = function (req, res) {
   Post.create(
@@ -16,6 +17,25 @@ module.exports.create = function (req, res) {
     }
   );
 };
+
+module.exports.destroy=function(req, res){
+  
+  Post.findById(req.params.id , function(err, post){
+    if(post){
+      if(req.user.id==post.user){
+        post.remove();
+        Comment.deleteMany(req.params.id , function(err){return res.redirect();})
+        
+      }
+      else{
+        return res.redirect('back')
+      }
+    }
+    else{
+      return res.redirect('back')
+    }
+  })
+}
 
 // module.exports.get=function(req, res){
   

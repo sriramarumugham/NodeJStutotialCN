@@ -51,6 +51,8 @@ app.post('/create-todo' , function(req, res){
     })
 })
 
+//how to send the seleted to do in  a array to the server and delete multiple thign on iteration 
+
 app.post('/delete-todo' , function(req, res){
     console.log(req.body);
 })
