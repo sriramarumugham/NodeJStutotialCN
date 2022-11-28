@@ -6,9 +6,15 @@ module.exports.profile = function (req, res) {
   });
 };
 module.exports.singUp = function (req, res) {
+  if (req.isAuthenticated()) {
+    return res.redirect("/users/profile");
+  }
   return res.render("user_sign_up", { title: "Codeial | sing-up" });
 };
 module.exports.signIn = function (req, res) {
+  if (req.isAuthenticated()) {
+    return res.redirect("/users/profile");
+  }
   return res.render("user_sign_in", { title: "Codeial | sing-in" });
 };
 
@@ -36,11 +42,16 @@ module.exports.create = function (req, res) {
 };
 
 module.exports.createSession = function (req, res) {
-   return res.redirect('/users/profile');
+  return res.redirect("/users/profile");
 };
 
-module.exports.signOut=function(req ,res){
-     res.cookie("user_id" , null);
-    return res.redirect('/users/sign-in');
-}
-
+module.exports.destroySession = function (req, res, next) {
+  req.logout(function (err) {
+    if (err) {
+      console.log("Couldnt signout user");
+      return next(err);
+    }
+    console.log("sign-out success");
+    return res.redirect("/");
+  });
+};

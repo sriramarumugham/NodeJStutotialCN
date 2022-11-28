@@ -8,7 +8,7 @@ passport.use(
     {
       usernameField: "email",
     },
-    
+
     function (email, password, done) {
       User.findOne({ email }, function (err, user) {
         if (err) {
@@ -41,5 +41,23 @@ passport.deserializeUser(function (id, done) {
     }
   );
 });
+
+///send the user details to the view of ejs
+
+passport.checkAuthentication =function(req, res, next){
+
+   if(req.isAuthenticated()){
+    return next();
+   }
+   return res.redirect('/users/sign-in');
+}
+passport.setAuthenticatedUser =function (req, res , next){
+
+  if(req.isAuthenticated() ){
+    res.locals.user=req.user;
+    
+  }
+   return next();
+}
 
 module.exports = passport;
