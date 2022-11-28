@@ -1,7 +1,24 @@
-module.exports.home= function(req, res){
+const Post = require('../models/post');
 
-    console.log("Cookie" , req.cookies);
-    res.cookie('_ID' , 666);
+module.exports.home = function (req, res) {
+  
+    // console.log("Cookie", req.cookies);
 
-    return res.render('home',{title:"home"})
-}
+//   Post.find({}, function (err, posts) {
+//     if (err) {
+//       console.log("Couldnt get the posts", err);
+//       return;
+//     }
+//     return res.render("home", { title: "Codeial /Home", posts: posts });
+//   });
+
+  Post.find({}).populate('user').exec(function(err, posts){
+
+    if (err) {
+        console.log("Couldnt get the posts", err);
+        return;
+      }
+      return res.render("home", { title: "Codeial /Home", posts: posts });
+    
+  })
+};
