@@ -2,11 +2,11 @@
     <p>
       <small>
         <% if(locals.user && locals.user.id==comment.user.id) {%>
-        <a href="/comments/destroy/<%= comment.id%>">X</a>
+        <a href="/comments/destroy/<%=comment.id%>">X</a>
         <% }%>
       </small>
       <%= comment.content %>
       <br />
-      <small> <%= comment.user.email %> </small>
+      <small> <%=comment.user.email%> </small>
     </p>
 </li>
