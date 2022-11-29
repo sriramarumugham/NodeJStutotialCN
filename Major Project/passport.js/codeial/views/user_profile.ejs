@@ -1,9 +1,24 @@
-<link rel="stylesheet" href="/css/user_profile.css">
+<link rel="stylesheet" href="/css/user_profile.css" />
+
+<h1>user/<%= title %></h1>
 
 
-    <h1>user/<%= title %></h1>
+<%  if(user.id == profile_user.id){ %>
     
-    <h1><%= user.name %></h1>
-    
-    <h1><%= user.email %></h1>
-    <a href="/users/destroy-session"> sign-out </a>
+    <form action="/users/update/<%= profile_user.id %>" method="post">
+         <label for="name">Name</label>
+         <input required id="name" name="name" placeholder="your name" value="<%= profile_user.name %>" />
+
+         <label for="email">Email</label>
+         <input required id="email" name="email" placeholder="your email" value="<%= profile_user.email %>" />
+         <input type="submit" value="submit">
+    </form>
+
+    <% }else{ %> 
+ <!-- show the information of the profile -->
+ <h1><%= profile_user.name %></h1>
+
+<h1><%= profile_user.email %></h1>
+
+<% } %> 
+<a href="/users/destroy-session"> sign-out </a>
