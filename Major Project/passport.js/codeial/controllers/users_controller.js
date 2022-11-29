@@ -13,16 +13,14 @@ module.exports.profile = function (req, res) {
 };
 
 module.exports.update = function (req, res) {
-
   if (req.user.id == req.params.id) {
     User.findByIdAndUpdate(req.params.id, req.body, function (err, user) {
       // return res.status('401').send('Unauthorized');
       // return res.redirect(`/users/profile/${req.user.id}`);
-    return res.redirect("back");
+      return res.redirect("back");
     });
     // return res.status("401").send("Unauthorized");
   } else {
-    
     return res.status("401").send("Unauthorized");
     // return res.redirect("back");
   }
@@ -65,6 +63,7 @@ module.exports.create = function (req, res) {
 
 module.exports.createSession = function (req, res) {
   // return res.redirect("/users/profile");
+  req.flash("success", "Logged in Successfully");
   return res.redirect(`/users/profile/${req.user.id}`);
 };
 
@@ -74,7 +73,7 @@ module.exports.destroySession = function (req, res, next) {
       console.log("Couldnt signout user");
       return next(err);
     }
-    console.log("sign-out success");
+    req.flash("success", "Logged out Successfully");
     return res.redirect("/");
   });
 };

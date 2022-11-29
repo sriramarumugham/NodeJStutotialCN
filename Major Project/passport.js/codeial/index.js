@@ -12,12 +12,17 @@ const cookieParser = require("cookie-parser");
 const session = require("express-session");
 
 const passport = require("passport");
+
 const passportLocal = require("./config/passport-local-strategy");
 
 ///to make the session storage constant in the server code to prevnet the server code runnig and creting every time when it gets reloaded
 const MongoStore = require("connect-mongo");
 
 const SassMiddleware=require('node-sass-middleware');
+
+const flash=require('connect-flash');
+
+const customMiddleWare=require('./config/middleware');
 
 const app = express();
 
@@ -75,6 +80,11 @@ app.use(passport.session());
 
 //access the user in the locals for the views whenever the new request is made
 app.use(passport.setAuthenticatedUser);
+
+//connect flash
+app.use(flash());
+
+app.use(customMiddleWare.setFlash);
 
 // static files
 app.use(express.static("assets"));
