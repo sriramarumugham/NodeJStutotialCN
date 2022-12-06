@@ -17,10 +17,12 @@ module.exports.update = function (req, res) {
     User.findByIdAndUpdate(req.params.id, req.body, function (err, user) {
       // return res.status('401').send('Unauthorized');
       // return res.redirect(`/users/profile/${req.user.id}`);
+      req.flash("success", "updated information");
       return res.redirect("back");
     });
     // return res.status("401").send("Unauthorized");
   } else {
+    req.flash("error", "you cannot update information");
     return res.status("401").send("Unauthorized");
     // return res.redirect("back");
   }
@@ -73,7 +75,8 @@ module.exports.destroySession = function (req, res, next) {
       console.log("Couldnt signout user");
       return next(err);
     }
-    req.flash("success", "Logged out Successfully");
+    
+    req.flash("success", " you Logged out ");
     return res.redirect("/");
   });
 };

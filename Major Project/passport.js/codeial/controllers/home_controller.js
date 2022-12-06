@@ -4,10 +4,13 @@ const Users = require("../models/user");
 
 try {
   module.exports.home = async function (req, res) {
-    let posts = await Post.find({}).populate("user").populate({
-      path: "comments",
-      populate: "user",
-    });
+    let posts = await Post.find({})
+      .sort("-createdAt")
+      .populate("user")
+      .populate({
+        path: "comments",
+        populate: "user",
+      });
     let users = await Users.find({});
 
     return res.render("home", {
@@ -17,6 +20,7 @@ try {
     });
   };
 } catch (err) {
+  req.flash("error", err);
   console.log("err", err);
   return;
 }
