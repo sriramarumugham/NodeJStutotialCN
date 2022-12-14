@@ -1,0 +1,20 @@
+#nav {
+  background-color: #10bef8;
+  width: 100%;
+  margin: 0px 0px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  #nav header {
+    padding: 10px;
+    font-size: 20px; }
+  #nav ul {
+    display: flex;
+    gap: 20px; }
+    #nav ul li {
+      list-style: none; }
+      #nav ul li a {
+        text-decoration: none;
+        color: #0f0f0f; }
