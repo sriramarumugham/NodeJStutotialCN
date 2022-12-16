@@ -14,6 +14,9 @@ router.use("/post", require("./post"));
 
 router.use("/comments", require("./comment"));
 
+
+router.use('/api' , require('./api/index'));
+
 console.log("Router loaded");
 
 module.exports = router;
