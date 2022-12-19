@@ -18,6 +18,10 @@ const passport = require("passport");
 //passport local
 const passportLocal = require("./config/passport-local-strategy");
 
+//passport jswt
+
+const passportJWT=require('./config/passport-jwt-strategy');
+
 ///to make the session storage constant in the server code to prevnet the server code runnig and creting every time when it gets reloaded
 const MongoStore = require("connect-mongo");
 
