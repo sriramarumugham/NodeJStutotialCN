@@ -22,6 +22,8 @@ const passportLocal = require("./config/passport-local-strategy");
 
 const passportJWT=require('./config/passport-jwt-strategy');
 
+const passportGoogle=require('./config/passport-google-oauth2-strategy');
+
 ///to make the session storage constant in the server code to prevnet the server code runnig and creting every time when it gets reloaded
 const MongoStore = require("connect-mongo");
 
