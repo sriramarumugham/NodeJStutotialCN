@@ -1,6 +1,6 @@
 const express = require("express");
 // multer
-const multer  = require('multer')
+const multer  = require('multer');
 
 //ejs
 const expressLayouts = require("express-ejs-layouts");
@@ -11,6 +11,9 @@ const bodyParser = require("body-parser");
 //cookie parser
 const cookieParser = require("cookie-parser");
 
+// 
+
+// 
 //express sessions
 const session = require("express-session");
 // passort

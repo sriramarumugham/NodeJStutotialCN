@@ -8,7 +8,6 @@ let htmlString=nodeMailer.renderTemplate({
 '/comments/new_comment.ejs'
 )
 
-console.log("htmlString" , htmlString);
   nodeMailer.transporter.sendMail(
     {
       from: "sriramlibra0@gmail.com",

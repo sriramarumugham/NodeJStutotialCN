@@ -16,7 +16,8 @@
 
   <div id="posts-list-container">
     <ul>
-      <% for(post of posts){ %> <%- include('_post')-%> <%} %>
+      <% for(post of posts){ %> <%- include('_post')-%> 
+      <%} %>
     </ul>
   </div>
 </section>
@@ -35,3 +36,14 @@
 <script src="/js/home_post_comments.js"></script>
 
 <script src="/js/home_post.js"></script>
+
+<!-- script for the toggle likes features -->
+
+<script src="js/toggle_likes.js"></script>
+
+<script>
+  $('.toggle-like-button').each(function(){
+    let self=this;
+    let toggleLIke=new ToggleLike(self);
+  });
+</script>

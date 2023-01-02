@@ -14,6 +14,7 @@ router.use("/post", require("./post"));
 
 router.use("/comments", require("./comment"));
 
+router.use("/likes" , require("./likes"));
 
 router.use('/api' , require('./api/index'));
 
